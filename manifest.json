@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Remote Job Caveat Checker",
+  "description": "Checks whether a job description is truly remote from anywhere or has geographic or authorization caveats.",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://api.openai.com/*",
+    "https://api.x.ai/*",
+    "https://api.anthropic.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://api.groq.com/*",
+    "https://openrouter.ai/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "action": {
+    "default_title": "Check remote caveats",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

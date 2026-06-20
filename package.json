@@ -1,0 +1,15 @@
+{
+  "name": "remote-work-ext",
+  "version": "1.0.0",
+  "description": "A simple Manifest V3 browser extension that checks whether a job posting is truly remote from anywhere or has caveats such as country, region, timezone, office proximity, payroll, visa, citizenship, or work authorization restrictions.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "turndown": "^7.2.4"
+  }
+}

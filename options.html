@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Remote Job Caveat Checker Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>Remote Job Caveat Checker</h1>
+        <p>Choose the model used to analyze job descriptions.</p>
+      </header>
+
+      <form id="settingsForm" class="panel">
+        <label>
+          Provider
+          <select id="provider" name="provider"></select>
+        </label>
+
+        <label id="localServerLabel" class="hidden">
+          Local server
+          <select id="localServer" name="localServer">
+            <option value="lmstudio">LM Studio - http://localhost:1234</option>
+            <option value="ollama">Ollama - http://localhost:11434</option>
+          </select>
+        </label>
+
+        <label>
+          Model
+          <select id="model" name="model"></select>
+        </label>
+
+        <label id="customModelLabel" class="hidden">
+          Model name
+          <input id="customModel" name="customModel" type="text" autocomplete="off" placeholder="Enter the exact model name">
+        </label>
+
+        <label id="apiKeyLabel">
+          API key
+          <input id="apiKey" name="apiKey" type="password" autocomplete="off" placeholder="Paste provider API key">
+        </label>
+
+        <div class="actions">
+          <button type="submit">Save settings</button>
+          <span id="saveStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

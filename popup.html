@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Remote Job Caveat Checker</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>Remote check</h1>
+          <p id="statusText">Reading this page...</p>
+        </div>
+        <button id="settingsButton" class="icon-button" type="button" title="Settings" aria-label="Settings">
+          <span aria-hidden="true">⚙</span>
+        </button>
+      </header>
+
+      <section id="loadingView" class="state">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Analyzing the job description for remote-work caveats.</p>
+      </section>
+
+      <section id="emptyView" class="state hidden">
+        <p>Configure an LLM provider before analyzing pages.</p>
+        <button id="openOptionsButton" type="button">Open settings</button>
+      </section>
+
+      <section id="errorView" class="state hidden">
+        <p id="errorMessage"></p>
+        <button id="retryButton" type="button">Try again</button>
+      </section>
+
+      <section id="resultView" class="hidden" aria-live="polite">
+        <dl class="job-info">
+          <div>
+            <dt>Title</dt>
+            <dd id="jobTitle">Unknown</dd>
+          </div>
+          <div>
+            <dt>Company</dt>
+            <dd id="company">Unknown</dd>
+          </div>
+          <div>
+            <dt>Stated location</dt>
+            <dd id="location">Unknown</dd>
+          </div>
+        </dl>
+
+        <div id="verdict" class="verdict"></div>
+
+        <section>
+          <h2>Analysis</h2>
+          <p id="summary"></p>
+        </section>
+
+        <section id="quotesSection" class="hidden">
+          <h2>Quoted evidence</h2>
+          <div id="quotes"></div>
+        </section>
+
+        <button id="reanalyzeButton" type="button">Analyze again</button>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

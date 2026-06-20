@@ -1,6 +1,12 @@
+# Third-Party Notices
+
+## Turndown
+
+This project includes [Turndown](https://github.com/mixmark-io/turndown), version 7.2.4.
+
 MIT License
 
-Copyright (c) 2026 shrief-khamis
+Copyright (c) 2017 Dom Christie
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
