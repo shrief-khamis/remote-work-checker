@@ -14,9 +14,15 @@ The extension is not currently available in the Chrome Web Store, so it must be 
 
 1. Open this repository on GitHub.
 2. Click the green **Code** button, then click **Download ZIP**.
+
+   ![Download zip from GitHub](docs/assets/download-zip-gh.png)
+
 3. Find the downloaded ZIP file and extract it.
 4. Open Chrome and enter `chrome://extensions` in the address bar.
 5. Turn on **Developer mode** in the upper-right corner.
+
+   ![Developer Mode Chrome](docs/assets/dev-mode-chrome.png)
+
 6. Click **Load unpacked**.
 7. Select the extracted folder that contains `manifest.json`.
 8. Optional: open Chrome's Extensions menu and pin **Remote Job Caveat Checker** for easier access.
@@ -86,6 +92,8 @@ Please note that to run a local server, you need to have strong hardware, downlo
 2. Expand the job description first if the site only loads the full text after clicking **Show more** or **Read more**.
 3. Click the **Remote Job Caveat Checker** extension icon.
 4. Wait for the analysis to appear in the popup.
+
+![The extension in action](docs/assets/ext-in-action.gif)
 
 The extension uses a deliberately strict standard:
 
